@@ -1,0 +1,56 @@
+.channel-cards {
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 0;
+
+
+  & .card {
+
+    & a {
+      text-decoration: none;
+      color: var(--primary-color);
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+    }
+
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 190px;
+    width: 190px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--accent-color);
+    --action-display: none;
+    &:hover {
+      border: 1px solid var(--primary-color);
+      --action-display: block;
+    }
+
+    & .actionIcon {
+      display: var(--action-display);
+      position: absolute;
+      top: 0px;
+      right: -1px;
+      color: var(--accent-color);
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .channel-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .channel-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}

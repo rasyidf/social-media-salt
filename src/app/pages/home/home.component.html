@@ -1,0 +1,23 @@
+<!-- home.component.html -->
+<app-container-layout>
+  <div class="home-container">
+    <div class="content-section">
+      @if (videos.length > 0) {
+      <app-group-section title="Videos" [contents]="videos" [actionText]="'Upload your own video'"></app-group-section>
+      }
+
+      @if (people.length > 0) {
+      <app-group-section category="People" [contents]="people" [actionText]="'Show your work'"></app-group-section>
+      }
+
+      @if (documents.length > 0) {
+      <app-group-section category="Documents" [contents]="documents" [actionText]="'Share your document'"></app-group-section>
+      }
+    </div>
+
+    <div class="sidebar">
+      <app-activity-section></app-activity-section>
+      <app-channel-section></app-channel-section>
+    </div>
+  </div>
+</app-container-layout>

@@ -1,0 +1,28 @@
+<app-detail-layout title="Activity" actionText="View timeline / Filter Activity" actionLink="/activity">
+
+  <ul class="activity-cards">
+    @for (item of activities; track $index) {
+    <li class="card">
+      <div class="actionIcon">
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0H64V64L0 0Z"  fill="#F4E4D9"  />
+          <path d="M39 19H53" stroke="#A53F45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M46 12V26" stroke="#A53F45"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <a href="{{ item.url }}" class="content-wapper">
+        <div class="image">
+
+        </div>
+        <div class="content">
+
+          <h3>{{ item.title }}</h3>
+          <p class="desc">{{ item.description }}</p>
+          <p>{{ item.date }}</p>
+        </div>
+      </a>
+    </li>
+    }
+  </ul>
+
+</app-detail-layout>

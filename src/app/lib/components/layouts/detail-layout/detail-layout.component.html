@@ -1,0 +1,14 @@
+ 
+<div class="detail-layout">
+  <div class="header">
+    <div class="title">
+      <h1>{{ title }}</h1>
+    </div>
+    <div class="actions">
+      <a [routerLink]="actionLink">{{ actionText }}</a>
+    </div>
+  </div>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

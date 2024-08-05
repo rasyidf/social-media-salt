@@ -1,0 +1,36 @@
+<!-- 3 Column, Title, Search, Actions -->
+<nav class="main-navbar">
+  <a class="title" [routerLink]="'/'">
+    <span>Social</span>
+    <span>Network</span>
+  </a>
+  <div class="search">
+    <input type="text" placeholder="Find...">
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-search">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.3-4.3" />
+      </svg>
+    </button>
+  </div>
+  <div class="actions">
+    <button class="upload">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-arrow-up">
+        <path d="m5 12 7-7 7 7" />
+        <path d="M12 19V5" />
+      </svg>
+      Upload</button>
+    <button class="avatar">
+      <img src="https://picsum.photos/40/40" alt="Avatar">
+      <div>
+        <span>John Doe</span>
+        <span>Admin</span>
+
+      </div>
+    </button>
+  </div>
+</nav>

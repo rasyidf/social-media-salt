@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('normalize.css');
+
+:root {
+  --primary-color: #a53f45;
+  --primary-text-color: #f4e4d9;
+  --accent-color: #f4e4d9;
+  --accent-text-color: #a53f45;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+@layer components {
+
+  ul.breadcrumbs {
+    display: flex;
+    gap: 0.2rem;
+    color: var(--primary-text-color);
+    padding-inline-start: 0;
+
+    & li {
+      list-style: none;
+
+      & a {
+        text-decoration: none;
+        color: var(--primary-text-color);
+      }
+
+      & a:hover {
+        text-decoration: underline;
+      }
+
+      /* after but not for last child */
+      &::after {
+        content: '/';
+        margin: 0 0.2rem;
+      }
+
+      &:last-child::after {
+        content: '';
+      }
+    }
+  }
+
+}

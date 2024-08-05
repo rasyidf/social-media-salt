@@ -1,0 +1,7 @@
+<ul class="breadcrumbs" [class]="size">
+  @for (item of breadcrumbs; track $index) {
+  <li>
+    <a routerLink="{{ item.url }}">{{ item.title }}</a>
+  </li>
+  }
+</ul>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="header">
+    <h1>{{ category }}</h1>
+    <a href="#">Browse all {{ category.toLowerCase() }}</a>
+  </div>
+  <div class="video-grid">
+    @if (contents.length > 0) {
+    <div class="video large" [style.backgroundImage]="'url(' + contents[0].imageUrl + ')'">
+      <div class="video-content">
+        <h2>{{ contents[0].title }}</h2>
+        <p>{{ contents[0].author }}</p>
+      </div>
+    </div>
+    @for ( content of contents.slice(1, 3); track content.id) {
+    <div class="video small" [style.backgroundImage]="'url(' + content.imageUrl + ')'">
+      <p>{{ content.author }}</p>
+      <p>{{ content.views }} views</p>
+    </div>
+    }
+    @for ( content of contents.slice(3, 5); track content.id) {
+    <div class="video small bottom" [style.backgroundImage]="'url(' + content.imageUrl + ')'">
+      <p>{{ content.author }}</p>
+      <p>{{ content.views }} views</p>
+    </div>
+    }
+    }
+    <a class="upload" href="#"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+      @if (actionText) {
+      <p>{{ actionText }}</p>
+      }
+      @else {
+      <p>Upload Your Own {{ category.slice(0, -1) }}</p>
+      }
+    </a>
+  </div>
+</div>
